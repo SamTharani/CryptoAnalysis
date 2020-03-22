@@ -2,7 +2,16 @@ import re
 from ngrams import ngram_score
 fitness = ngram_score('quadgrams.txt')
 from pycipher import Affine
-
+'''
+	Affine cipher consists of 2 keys, considered as a and b
+	cipher = ap + b(mod m) 1<=a<=m , 1<=b<=m
+	decrypt = a^-1(c-b)(mod m)
+	
+	Note:
+	a should be chosen to be relatively prime to m
+	a^-1 is the multiplicative inverse of a in the group of integers modulo m
+	ax = 1 (mod m) here x is a^-1
+'''
 def analysis_affine(ctext):
     #Remove spacing and non-alpha numeric characters
     ctext = re.sub('[^A-Z]','',ctext.upper())
