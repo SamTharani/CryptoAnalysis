@@ -22,3 +22,4 @@ log(P(SYSTEM)) = log(P(SYST)) + log(P(YSTE)) + log(P(STEM))
 
 higher number means it is more highly to be English
 
+*ngrams.py and quadgram.txt are downloaded from the internet
